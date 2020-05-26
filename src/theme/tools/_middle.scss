@@ -1,0 +1,32 @@
+@mixin tl-middle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    @content;
+}
+
+//垂直居中
+@mixin tl-horiz-vert{
+    @include tl-middle(){
+        margin: auto;
+    };
+}
+
+//
+@mixin tl-horiz-normal{
+    @include tl-middle(){
+        margin: 0 auto;
+        margin-top: 30vh;
+    };
+}
+
+@mixin tl-horiz-bottom {
+    @include tl-middle(){
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+    }
+}
+

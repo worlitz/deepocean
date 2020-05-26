@@ -1,0 +1,29 @@
+{
+  "name": "deepocean",
+  "version": "0.1.0",
+  "description": "UI组件库",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.6",
+    "vue": "^2.6.11"
+  },
+  "scripts": {
+    "lint": "eslint src/**/* test/**/* packages/**/* build/**/* --quiet",
+    "pre-commit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worlitz/deepocean.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/worlitz/deepocean/issues"
+  },
+  "homepage": "https://github.com/worlitz/deepocean#readme"
+}
