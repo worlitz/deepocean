@@ -1,0 +1,15 @@
+@import './test.scss';
+@import './vars/colors';
+
+$test: $name2;
+
+.c {
+    $color: red !global;
+}
+.d{
+    background: $color;
+}
+
+.e {
+    background-color: ;
+}

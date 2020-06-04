@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 function colorType(color) {
-    const colors = color.split(' ')
+    const colors = color.trim().split(' ')
 
     if (colors.every((color)=> color.match(/^(#|var\(--|(rgb|hsl)a?\()/))) {
         return 'not css color!'
@@ -17,31 +17,19 @@ export default Vue.extend({
         color: {
             type: String,
         },
-        direction: {
-            type: String,
-            default: top,
-        },
     },
     methods: {
-        setBgColor(color, vnode) {
-            const status = colorType(color)
+        // 设置背景颜色
+        setBgColor() {
 
-            if (status === 'color') {
-                vnode.style = {
-                    ...vnode.style,
-                    'background-color': `${color}`,
-                    'border-color': `${color}`,
-                }
-            } else if (status === 'colors') {
-                if (direction) {
-                    vnode.style = {
-                        ...vnode.style,
-                        'background-color': `linear-gradint(${direction}
-                            , ${color.split(' ')})`,
-                        'border-color': `${color.split(' ')[0]}`,
-                    }
-                }
-            }
         },
-    },
+        // 设置文本颜色
+        setTextColor() {
+
+        },
+        // 设置渐变颜色
+        setLinearColor() {
+
+        },
+    }
 })
